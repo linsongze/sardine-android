@@ -24,6 +24,7 @@ import org.simpleframework.xml.Root;
  *       &lt;choice&gt;
  *         &lt;element ref="{DAV:}exclusive"/&gt;
  *         &lt;element ref="{DAV:}shared"/&gt;
+ *         &lt;element ref="{DAV:}write"/&gt;
  *       &lt;/choice&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -42,6 +43,8 @@ public class Lockscope {
     @Element(required = false)
     private Shared shared;
 
+    @Element(required = false)
+    private Write write;
     /**
      * Gets the value of the exclusive property.
      * 
@@ -88,6 +91,22 @@ public class Lockscope {
      */
     public void setShared(Shared value) {
         this.shared = value;
+    }
+
+    public Write getWrite() {
+        return write;
+    }
+
+    public void setWrite(Write write) {
+        this.write = write;
+    }
+
+    @Root
+    @Namespace(prefix = "D", reference = "DAV:")
+    public static class Write  {
+
+
+
     }
 
 }

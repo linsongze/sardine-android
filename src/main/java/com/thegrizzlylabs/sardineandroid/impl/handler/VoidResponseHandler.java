@@ -10,7 +10,7 @@ import okhttp3.Response;
 
 /**
  * {@link ResponseHandler} which just executes the request and checks the answer is
- * in the valid range of {@link ValidatingResponseHandler#validateResponse(okhttp3.Response)}.
+ * in the valid range of {@link ValidatingResponseHandler#validateResponse(Response)}.
  *
  * @author mirko
  */

@@ -32,7 +32,7 @@ public class LockResponseHandler extends ValidatingResponseHandler<String>
      *
      * @param stream The input to read the status
      * @return Multistatus element parsed from the stream
-     * @throws java.io.IOException When there is a JAXB error
+     * @throws IOException When there is a JAXB error
      */
     protected String getToken(InputStream stream) throws IOException {
         Prop prop = SardineUtil.unmarshal(Prop.class, stream);

@@ -10,7 +10,7 @@ public class ElementConverter {
 
     public static Element read(InputNode node) throws Exception {
         QName qname = new QName(node.getReference(), node.getName(), node.getPrefix());
-        org.w3c.dom.Element element = SardineUtil.createElement(qname);
+        Element element = SardineUtil.createElement(qname);
         element.setTextContent(node.getValue());
         return element;
     }

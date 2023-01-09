@@ -37,10 +37,10 @@ import org.simpleframework.xml.Root;
 @Namespace(prefix = "D", reference = "DAV:")
 public class Lockinfo {
 
-    @Element
+    @Element(required = false)
     private Lockscope lockscope;
 
-    @Element
+    @Element(required = false)
     private Locktype locktype;
 
     @Element(required = false)
